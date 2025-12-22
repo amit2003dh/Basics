@@ -1,3 +1,52 @@
+**MongoDB** is a **NoSQL, document-oriented database** used to store data in **JSON-like documents (BSON)** instead of rows and tables.
+
+### In simple words
+
+> MongoDB stores data as **documents**, not tables.
+
+### What makes MongoDB different
+
+* **Schema-flexible** → fields can change without migrations
+* **Document-based** → data stored as key–value pairs
+* **High performance** → fast reads and writes
+* **Scalable** → easy horizontal scaling
+
+### Basic structure
+
+```
+Database
+ → Collections
+   → Documents
+```
+
+### Example document
+
+```json
+{
+  "name": "Amit",
+  "role": "user",
+  "orders": ["pizza", "burger"]
+}
+```
+
+### Where MongoDB is used
+
+* Web applications
+* Real-time systems
+* E-commerce & food delivery apps
+* MERN stack projects
+
+### Why developers choose MongoDB
+
+* Natural fit for JavaScript/Node.js
+* Handles nested and dynamic data easily
+* Faster development for evolving apps
+
+### Interview one-liner
+
+> “MongoDB is a NoSQL document database that stores data in flexible JSON-like documents instead of tables.”
+
+___
 
 ### MongoDB Shell Commands
 
