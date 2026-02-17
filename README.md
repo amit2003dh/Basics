@@ -300,3 +300,252 @@ app.use("/api/v1/user", userRoutes);
 * Nodemon for auto-restart
 
 ---
+
+# 🧠 Backend Overview
+
+## What is Backend?
+
+Backend = Server + Business Logic + Database
+
+Flow:
+
+```
+Browser / Mobile App
+        ↓
+      API
+        ↓
+    Backend Server
+        ↓
+     Database (DB)
+```
+
+Frontend sends request → Backend processes → DB stores/retrieves → Response sent back.
+
+---
+
+# 📁 Project Structure (Node + Express)
+
+```
+src/
+│
+├── index.js        → Entry point
+├── config/         → DB & app configuration
+├── models/         → Data schema
+├── controllers/    → Business logic
+├── routes/         → API endpoints
+├── middleware/     → Request handlers
+├── utils/          → Helper functions
+├── constants/      → Enums, DB name, static values
+```
+
+---
+
+## Folder Responsibilities
+
+* **index.js** → Server start + DB connection
+* **models** → Structure of data
+* **controllers** → Functional logic
+* **routes** → URL paths
+* **middleware** → Runs before controller
+* **utils** → Mail, token, helpers
+* **config** → DB & environment setup
+
+---
+
+# 🚀 Server Setup (Express)
+
+### Install
+
+```bash
+npm init -y
+npm install express
+```
+
+---
+
+### index.js
+
+```js
+import express from "express";
+
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Home Route");
+});
+
+app.listen(5000, () => {
+  console.log("Server running");
+});
+```
+
+---
+
+# 📦 Important npm Commands
+
+```bash
+npm init -y         # Create package.json
+npm install express # Install dependency
+```
+
+---
+
+# 🌍 Environment Variables
+
+Install dotenv:
+
+```bash
+npm install dotenv
+```
+
+Create `.env` file:
+
+```
+PORT=5000
+MONGO_URL=your_db_url
+```
+
+Use in code:
+
+```js
+import dotenv from "dotenv";
+dotenv.config();
+```
+
+---
+
+# 🗃 Using ES Modules
+
+In `package.json`:
+
+```json
+"type": "module"
+```
+
+Then use:
+
+```js
+import express from "express";
+```
+
+---
+
+# 🔐 .gitignore
+
+Used to hide:
+
+* `.env`
+* `node_modules`
+* Private files
+
+```bash
+git init
+touch .gitignore
+```
+
+---
+
+# 🌐 Deployment
+
+Steps:
+
+1. Push code to GitHub
+2. Use cloud platform (e.g., DigitalOcean, Render, Railway)
+3. Configure environment variables
+4. Connect to cloud database
+
+---
+
+# 🔗 API Routes
+
+```js
+app.get("/", (req, res) => {
+  res.send("Home");
+});
+```
+
+* `/` → Home route
+* Defines path for API
+
+---
+
+# 📡 Frontend Integration
+
+Frontend created using:
+
+```bash
+npm create vite@latest
+```
+
+Install Axios:
+
+```bash
+npm install axios
+```
+
+Axios → Used to send HTTP requests.
+
+---
+
+# 🔁 Proxy Configuration (Vite)
+
+To avoid CORS in development:
+
+### vite.config.js
+
+```js
+server: {
+  proxy: {
+    "/api": "http://localhost:5000"
+  }
+}
+```
+
+---
+
+# 🗂 dist Folder
+
+* Created after build
+* Contains optimized production files
+
+---
+
+# 🧰 Common Backend Tools
+
+* **Express** → Server framework
+* **MongoDB** → Database
+* **dotenv** → Manage secrets
+* **Axios** → Frontend API calls
+* **Git** → Version control
+* **Cloud hosting** → Deployment
+
+---
+
+# 🧩 Basic Deployment Flow
+
+Local Computer
+↓
+Node + Express running
+↓
+Push to GitHub
+↓
+Deploy to cloud server
+↓
+Connect to cloud DB
+
+---
+
+# 🎯 Backend Development Checklist
+
+✔ Setup project
+✔ Install dependencies
+✔ Configure DB
+✔ Create routes
+✔ Add controllers
+✔ Add middleware
+✔ Use environment variables
+✔ Secure with .gitignore
+✔ Push to GitHub
+✔ Deploy
+
+---
