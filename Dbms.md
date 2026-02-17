@@ -253,3 +253,4 @@ Purpose → Remove redundancy & maintain consistency
 * Normalization = remove dependency issues
 
 ---
+![oops](https://github.com/user-attachments/assets/7a8654bb-9a7d-4f8e-a34c-1e3ea9b5b9e1)
