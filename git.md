@@ -129,4 +129,156 @@ brew install git
 
 ---
 
-If you want, I can convert this into a **1-page revision sheet** or **interview-focused Git crash sheet**.
+Here’s your **1-Page Git Crash Sheet (Interview + Practical Use)** — minimal, sharp, high-signal.
+
+---
+
+
+# 🚀 GIT – 1 Page Power Revision
+
+## 🔹 Core Concept (Interview Line)
+
+> Git is a distributed version control system that tracks file changes using snapshots and enables branching, merging, and collaboration.
+
+---
+
+# 🧠 Git Architecture (Must Know)
+
+**Working Directory → Staging Area → Local Repository → Remote Repository**
+
+```bash
+git add        # Working → Staging
+git commit     # Staging → Local repo
+git push       # Local → Remote
+```
+
+---
+
+# ⚡ Daily Workflow
+
+```bash
+git clone <url>
+git switch -c feature-x
+# make changes
+git add .
+git commit -m "feature added"
+git push origin feature-x
+```
+
+---
+
+# 🔍 Debug & Inspect Like a Pro
+
+```bash
+git status
+git diff
+git diff --staged
+git log --oneline --graph --all
+```
+
+---
+
+# 🌿 Branch Mastery
+
+```bash
+git branch
+git switch branch-name
+git switch -c new-branch
+git merge branch-name
+```
+
+Interview Tip:
+
+* Branch = lightweight pointer
+* Merge = combines histories
+* No new copy created, just pointer movement + merge commit (if needed)
+
+---
+
+# 🧨 Fix Mistakes (Very Important)
+
+### Unstage file
+
+```bash
+git restore --staged file
+```
+
+### Discard local changes
+
+```bash
+git restore file
+```
+
+### Undo last commit (keep changes)
+
+```bash
+git reset --soft HEAD~1
+```
+
+### Undo last commit (remove changes)
+
+```bash
+git reset --hard HEAD~1
+```
+
+---
+
+# 🌍 Collaboration Model
+
+```bash
+git remote -v
+git fetch
+git pull
+git push
+```
+
+**Open Source Flow**
+Fork → Clone → Branch → Commit → Push → Pull Request
+
+---
+
+# 📁 .gitignore
+
+Used to prevent tracking:
+
+```
+node_modules/
+.env
+dist/
+```
+
+---
+
+# 🏆 Interview Power Questions
+
+**Q: Difference between git fetch and git pull?**
+
+* fetch → download changes
+* pull → fetch + merge
+
+**Q: What is HEAD?**
+
+* Pointer to current commit
+
+**Q: What is rebase?**
+
+* Rewrites history to create linear commits
+
+**Q: Fast-forward merge?**
+
+* No divergence → branch pointer moves forward
+
+---
+
+# 💡 Advanced Edge
+
+```bash
+git stash
+git rebase branch-name
+git cherry-pick <commit-id>
+git log --since="2 days ago"
+```
+
+---
+
+
