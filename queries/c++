@@ -1,0 +1,32 @@
+# can we use vector as key for map
+
+C++
+std::map (Ordered): Yes. std::vector provides the necessary comparison operators (specifically operator<) by default. It compares elements lexicographically.
+std::unordered_map (Hash-based): No, not by default. Standard C++ does not provide a hash function for std::vector. To use it, you must provide a custom hash function. 
+
+# string to lowercase
+
+Python: Use .lower().
+Example: "HELLO".lower() 
+ "hello".
+For aggressive Unicode matching, use .casefold().
+  
+JavaScript: Use .toLowerCase().
+Example: str.toLowerCase().
+For locale-specific conversion (e.g., Turkish), use .toLocaleLowerCase().
+
+Java: Use .toLowerCase().
+Example: str.toLowerCase().
+You can also specify a locale: str.toLowerCase(Locale.ENGLISH).
+C#: Use .ToLower().
+Example: str.ToLower().
+  
+C++: C++ does not have a single string.lower() method. You typically use std::transform with ::tolower.
+Example: std::transform(s.begin(), s.end(), s.begin(), ::tolower);
+
+Height vs. Depth
+
+While often used interchangeably for the entire tree, they differ for individual nodes: 
+Height of a node: Longest path from the node down to a leaf.
+Depth of a node: Path length from the root down to that node.
+The height of the tree is equal to the depth of its deepest node.
